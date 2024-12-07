@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  /* Distribución adecuada */
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.logo {
+    font-family: "Fugaz One", sans-serif;
+    font-size: 36px;
+    color: #1AE558;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1AE558;
+    font-weight: 500;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul {
+        gap: 50px;
+    }
+}
+
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.chatbot-section {
+    width: 100%;
+    height: auto;
+    background-image: url(/imagenes/squat.jpg);
+    background-position:center;
+    background-attachment: scroll;
+}
+
+.chatbot-content {
+    display: flex;
+    flex-wrap: wrap; /* Asegura que en pantallas pequeñas los elementos se ajusten */
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.chatbot-text {
+    flex: 1; /* Toma todo el espacio disponible en pantallas grandes */
+    margin-right: 20px;
+}
+
+.chatbot-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1AE558;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+.chatbot-section p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+    letter-spacing: 2px;
+}
+
+.chatbot-image {
+    flex: 0 0 30%; /* La imagen ocupa el 40% del ancho */
+    max-width: 400px;
+}
+
+.chatbot-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .chatbot-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .chatbot-text{
+        width: 80%;
+    }
+    .chatbot-section h2{
+        font-size: 18px;
+        text-align: left;
+    }
+    .chatbot-section p{
+        font-size: 14px;
+        text-align: left;
+    }
+    .chatbot-section{
+        background-position: right;
+    }
+    .chatbot-image {
+        margin-top: 20px; /* Espacio encima de la imagen */
+        flex: 1 0 100%; /* En pantallas pequeñas la imagen ocupa el 100% */
+    }
+    .chatbot-image img{
+        width: 200px;
+    }
+
+    .chatbot-text {
+        margin-right: 0;
+    }
+}
+
+
+
+.bienvenida{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+.logo-b{
+    font-size: 5.2rem;
+}
+.bienvenida p {
+    font-size: 1.3rem;       
+    font-weight: 300;           
+    text-align: justify;          
+    line-height: 1.6;             
+    color: #333;                 
+    letter-spacing: 0.7px;
+    margin: 20px;               
+    padding: 20px;        
+}
+.bienvenida img {
+    max-width: 100%;           
+    height: auto;             
+    display: block;    
+    object-fit: cover;      
+    border-radius: 8px;
+}
+
+.ejercicios{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 100px;
+    gap: 20px;
+}
+.ejercicios h1{
+    width: 80%;
+    font-weight: 500;
+    color:#333;
+    letter-spacing: 1px;
+}
+.item{
+    width: 25%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;    
+    overflow: hidden;       
+}
+.item img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;      
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    flex-grow: 1; 
+}
+
+.info h3 {
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: auto;
+}
+
+.info p {
+    color: #666;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .item {
+        width: 45%; 
+        height: auto;
+    }
+
+    .info h3 {
+        font-size: 15px;
+    }
+
+    .info p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: 80%;
+        height: auto;
+    }
+
+    .info h3 {
+        font-size: 16px;
+    }
+
+    .info p {
+        font-size: 14px; 
+    }
+}
+
+
+
+
+.pastillas {
+    width: 70%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.recomendados {
+    flex: 1;
+    min-width: 300px; 
+}
+
+.imagen {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recomendados h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 0px 15px;
+}
+
+.item-reco {
+    padding: 15px;
+}
+
+.item-reco h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.item-reco p {
+    margin: 0;
+    padding-top: 5px;
+    color: #666;
+}
+
+.imagen img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto; 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .pastillas {
+        flex-direction: column; /* Cambia la orientación a vertical en pantallas pequeñas */
+        align-items: center; /* Centra los elementos en dispositivos pequeños */
+    }
+
+    .recomendados,
+    .imagen {
+        min-width: unset;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .recomendados h2 {
+        font-size: 1.5rem;
+    }
+
+    .item-reco h4 {
+        font-size: 1rem; /* Reduce un poco el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+
+
+.productos {
+    width: 80%;
+    margin-top: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.productos h1{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333;
+}
+.producto {
+    width: calc(25% - 20px); /* 4 productos por línea */
+    max-width: 250px;
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.producto:hover {
+    transform: scale(1.02);
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.producto p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.producto button {
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.producto button:hover {
+    background-color: #218838;
+}
+
+/* Responsividad */
+@media screen and (max-width: 1024px) {
+    .producto {
+        width: calc(33.33% - 20px); /* 3 productos por línea */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .producto {
+        width: calc(50% - 20px); /* 2 productos por línea */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .producto {
+        width: 100%; /* 1 producto por línea */
+    }
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    letter-spacing: 0.7px;
+}
+
+.footer-container .logo {
+    font-size: 2.6rem;
+}
+
+.footer-contact, .footer-info, .footer-social {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-contact h4, .footer-info h4, .footer-social h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1AE558;
+}
+
+.footer-contact p, .footer-info ul, .footer-social ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-info ul {
+    list-style: none;
+}
+
+.footer-info ul li, .footer-social ul li {
+    margin: 5px 0;
+    list-style: none;
+}
+
+.footer-info ul li a, .footer-social ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-info ul li a:hover, .footer-social ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-social ul li a {
+    font-size: 20px;
+    color: #fff;
+}
+
+.footer-social ul li a:hover {
+    color: #ddd;
+}
+
+.footer-copyright {
+    margin-top: 30px;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-contact, .footer-info, .footer-social {
+        min-width: 100%;
+    }
+
+    .footer-info ul, .footer-social ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-social ul {
+        flex-direction: row;
+        margin-top: 10px;
+    }
+}
