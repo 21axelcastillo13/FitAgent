@@ -334,7 +334,6 @@ main{
 }
 
 
-
 .productos {
     width: 80%;
     margin-top: 7%;
@@ -343,6 +342,7 @@ main{
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    align-items: stretch; /* Asegura alturas uniformes */
 }
 .productos h1{
     width: 100%;
@@ -353,6 +353,7 @@ main{
     letter-spacing: 1px;
     color: #333;
 }
+
 .producto {
     width: calc(25% - 20px); /* 4 productos por línea */
     max-width: 250px;
@@ -361,10 +362,10 @@ main{
     background: #fff;
     border-radius: 8px;
     transition: transform 0.2s ease;
-}
-
-.producto:hover {
-    transform: scale(1.02);
+    display: flex;
+    flex-direction: column; /* Alinea contenido verticalmente */
+    justify-content: space-between; /* Distribuye los elementos */
+    min-height: 300px; /* Altura mínima uniforme */
 }
 
 .producto img {
@@ -379,12 +380,22 @@ main{
     font-size: 18px;
     margin: 10px 0;
     color: #333;
+    flex-grow: 1; /* Asegura que el título ocupe espacio uniforme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .producto p {
     font-size: 16px;
     color: #555;
     margin-bottom: 10px;
+    flex-grow: 1; /* Garantiza que el párrafo ocupe espacio uniforme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .producto button {
@@ -419,6 +430,7 @@ main{
         width: 100%; /* 1 producto por línea */
     }
 }
+
 
 
 
